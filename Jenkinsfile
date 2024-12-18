@@ -1,7 +1,7 @@
 pipeline{
     
     
-    agent any
+    agent {label'master'}
     tools{maven "M3"}
     
     stages{
@@ -42,7 +42,7 @@ pipeline{
             
             steps{
                 
-                sh "java -jar /home/coder/.jenkins/workspace/petclinicDeclarativePipeline/target/*.jar"
+                sh "java -jar /home/coder/.jenkins/workspace/PetClinicDeclarativePipeline/target/*.jar"
             }
        }
     
